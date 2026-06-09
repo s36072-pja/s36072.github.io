@@ -1,0 +1,446 @@
+
+    html, body{
+    min-height:100vh;
+    margin:0;
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+}
+
+.alt-footer{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#footer{
+    margin-top:auto;
+     width:100%;
+    margin:0;
+    padding:0;
+}
+
+header{
+    margin: 0;
+    padding: 0;  
+}
+
+.powitanie{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+
+    max-width:1200px;
+    margin:30px auto;
+    padding:20px;
+}
+
+
+.machajka{
+    flex-shrink:0;
+    margin:0;
+}
+
+.machajka img{
+    display:block;
+    width:220px;
+    height:auto;
+}
+
+.newsletter{
+    display:flex;
+    align-items:flex-end;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.submit {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: 2rem;
+
+    }
+
+
+
+.bottombox {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:5vw;
+    }
+
+   .formbox{
+    width:100%;
+    max-width:300px;
+
+    height:40px;
+
+    box-sizing:border-box;
+
+    background-color:rgb(224,230,230);
+
+    box-shadow:5px 3px #858585;
+
+    border-style:dashed;
+    border-radius:2px;
+    border-color:rgb(87,142,185);
+}
+
+    .game-thumb{
+
+    margin-bottom:1rem;
+    display:block;
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-top:2px solid #ffffff;
+    border-left:2px solid #ffffff;
+    border-right:2px solid #7A7A7A;
+    border-bottom:2px solid #7A7A7A;
+    background:white;
+    margin-bottom:1rem;
+}
+   
+
+    div.forms {
+        margin: 0;
+    }
+    div.albums {
+
+        padding: 1vh;
+        padding-bottom: 1vh;
+    }
+
+
+.games-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:2rem;
+    flex-wrap:wrap;
+    margin:3rem auto;
+    max-width: 75%;
+}
+
+/* ===== OKNO XP ===== */
+
+.xp-window{
+
+    width:fit-content;
+    height: auto;
+
+    background:#ECE9D8;
+
+    border:1px solid #003C74;
+
+    text-decoration:none;
+    color:black;
+
+    overflow:hidden;
+
+    box-shadow:
+        4px 4px rgba(0,0,0,.25);
+
+    transition:
+        transform .2s ease-in;
+        box-shadow: .2s ease-in;
+}
+
+.xp-window:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        8px 12px rgba(0,0,0,.1);
+}
+
+
+
+.xp-titlebar{
+
+    height:32px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 6px;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #4A8EF7 0%,
+            #1E63E9 45%,
+            #0054E3 100%
+        );
+}
+
+.xp-title{
+
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #EDF3FB;
+  size: 16px;
+    display:flex;
+    gap:2px;
+}
+
+.xp-post-title-center{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    background-color:#ECE9D8; ;
+}
+.xp-btn{
+
+    width:18px;
+    height:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:10px;
+    font-weight:bold;
+
+    color:#000;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff,
+            #d9e7ff
+        );
+
+    border:
+        1px solid #8CA9DB;
+
+    border-radius:2px;
+}
+
+.xp-btn.close{
+
+    color:white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #FF7A7A,
+            #D93434
+        );
+
+    border:
+        1px solid #B11919;
+}
+
+.xp-content{
+
+    padding:1rem;
+    height: fit-content;
+    width: auto;
+}
+
+.xp-content h3{
+
+    margin-top:0;
+
+    color:#003399;
+
+    font-family:Tahoma, sans-serif;
+}
+
+.xp-content p{
+
+    font-family:Tahoma, sans-serif;
+    line-height:1.5;
+}
+
+.xp-post{
+
+    height:auto;
+    width:100%;
+    max-width:px;
+
+    margin:2rem auto;
+
+    border:1px solid #003C74;
+
+    box-shadow: 4px 4px rgba(0,0,0,.2);
+
+    overflow:hidden;
+    border-style: solid 1px;
+    border-color: #000;
+
+}
+
+.xp-post-edit{
+    display:block;
+    height:100%;
+    max-width:60%;
+    margin:2rem auto;
+
+    border:1px solid #003C74;
+
+    box-shadow: 4px 4px rgba(0,0,0,.2);
+
+    overflow:hidden;
+    border-style: solid 1px;
+    border-color: #000;
+
+}
+
+.xp-post-center{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.xp-post-bar{
+
+    height:32px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #4A8EF7,
+            #0054E3
+        );
+
+    color:white;
+
+    font-family:Tahoma, sans-serif;
+    font-size:0.85rem;
+    font-weight:bold;
+}
+
+
+
+.xp-post-title{
+
+    background:#ECE9D8;
+
+    padding:1rem;
+
+    text-align:center;
+
+
+font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+    color:#003399;
+
+}
+
+.xp-post-title-edit{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:flex-start;
+    background:#ECE9D8;
+
+    padding-top:2rem;
+    padding-bottom: 2rem;
+    padding: 1rem;
+
+    text-align:left;
+
+    
+   
+}
+    @media screen and (max-width: 768px) {
+        .xp-post-title-edit{
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        }
+    }
+
+
+.xp-buttons{
+    display:flex;
+    gap:2px;
+}
+
+.xp-btn{
+
+    width:18px;
+    height:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:10px;
+    font-weight:bold;
+
+    color:#000;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff,
+            #d9e7ff
+        );
+
+    border:1px solid #8CA9DB;
+
+    border-radius:2px;
+}
+
+.xp-btn.close{
+
+    color:white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #FF7A7A,
+            #D93434
+        );
+
+    border:1px solid #B11919;
+}
+
+         .newsletter{
+
+                flex-direction:column;
+
+                align-items:stretch;
+
+                gap:1rem;
+            }
+
+            .fields{
+
+                width:100%;
+            }
+
+            .formbox{
+
+                width:100%;
+                margin-bottom: 1rem;
+                max-width:none;
+            }
+
+            .submit{
+
+                width:100%;
+                margin:0;
+            }
+

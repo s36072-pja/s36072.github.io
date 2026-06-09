@@ -1,0 +1,183 @@
+
+<div class="przerwa"></div>
+<footer class="alt-footer">
+
+    <hr>
+
+    <div class="footer-content">
+
+        <div class="footer-text">
+
+            <h6 class="byebye">Do zobaczenia następnym razem!</h6>
+
+            <p>
+                <b>Strona stworzona z miłością przez majkę.</b><br><br>
+
+                Shitpost Corner Majki to satyryczny projekt
+                stworzony na rzecz Przedmiotu GRKWEB1.
+                Jest tylko i wyłącznie satyrycznym i
+                hiperbolizowanym przedstawieniem rzeczywistości.
+                Nie powinna być ona brana poważnie.
+            </p>
+
+            <p class="footer-author">
+                Wiktoria Majewska<br>
+                s36072
+            </p>
+
+        </div>
+
+        <div class="footer-image">
+            <img src="../../../pliki/Smiley-clean.PNG"
+                 alt="Brzydki doodle majki">
+        </div>
+
+    </div>
+
+</footer>
+
+<style>
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.alt-footer{
+    width:100%;
+    background:white;
+    margin:0;
+    padding:0;
+}
+
+.alt-footer hr{
+    margin:0;
+    padding:0;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:15vh;
+    margin:25px;
+}
+
+.footer-logo img{
+    width:240px;
+    height:auto;
+    display:block;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .footer-inner{
+        margin:15px;
+    }
+
+    .footer-logo img{
+        width:25vh;
+    }
+}
+
+.byebye{
+    transition:0.5s ease-in;
+}
+.byebye:hover{
+    transform: translateY(-5px);
+}
+.alt-footer{
+    width:100%;
+    background:white;
+    margin:0;
+    padding:0;
+}
+
+.alt-footer hr{
+    margin:0;
+    padding:0;
+}
+
+.footer-content{
+
+    display:flex;
+    flex-direction:row;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:4rem;
+
+    max-width:1200px;
+
+    margin:0 auto;
+    padding:40px 20px;
+}
+
+.footer-text{
+    flex:1;
+    max-width:650px;
+}
+
+.footer-text h6{
+
+    margin:0 0 1rem 0;
+
+    font-size:2rem;
+}
+
+.footer-text p{
+
+    margin:0;
+    line-height:1.6;
+}
+
+.footer-author{
+
+    margin-top:2rem !important;
+    font-weight:bold;
+}
+
+.footer-image{
+
+    flex-shrink:0;
+    justify-content: right;
+     transition: 1s ease-in-out;
+}
+
+.footer-image img{
+
+    width:150px;
+    height:auto;
+
+    display:block;
+}
+
+.footer-image:hover{
+    transform: rotateZ(1080deg) scale(0.5);
+   
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .footer-content{
+
+        flex-direction:column;
+        text-align:center;
+
+        gap:2rem;
+    }
+
+    .footer-image img{
+
+        width:120px;
+    }
+}
+
+</style>

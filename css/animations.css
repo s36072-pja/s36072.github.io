@@ -1,0 +1,164 @@
+.bujanie {
+  display: inline-block;
+  transform-origin: center top;
+  animation: bujanie 0.3s ease-in infinite;
+  will-change: transform;
+  transform-origin: bottom;
+  height: 25vw;
+  width: auto;
+}
+
+.bujanie:hover {
+    animation: bujanie 2s ease-in infinite;
+
+
+}
+    
+.support:hover {
+
+    transform:scale(1.05) translateY(-2px) ;
+    transition: 0.3s ease-in;
+    background-color:blue;
+    color: aliceblue;
+  
+    
+
+
+}
+
+@keyframes bujanie {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+#loader{
+
+    position:fixed;
+    inset:0;
+
+    background:#ECE9D8;
+
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:1;
+    transform:scale(1);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+#loader.fade-out{
+
+    opacity:0;
+
+    transform:scale(1.03);
+
+    filter:blur(5px);
+
+    pointer-events:none;
+}
+
+.loader-window{
+
+    width:min(90vw, 400px);
+
+    border:1px solid #003C74;
+
+    background:#ECE9D8;
+
+    box-shadow:
+        0 0 0 1px #ffffff inset,
+        4px 4px 12px rgba(0,0,0,.3);
+}
+
+.loader-bar{
+
+    background:
+        linear-gradient(
+            to bottom,
+            #4A8EF7,
+            #0054E3
+        );
+
+    color:white;
+
+    font-family:Tahoma, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+
+    padding:6px 10px;
+}
+
+.loader-content{
+
+    padding:20px;
+
+    text-align:center;
+
+    font-family:Tahoma, sans-serif;
+}
+
+.progress{
+
+    margin-top:15px;
+
+    height:20px;
+
+    border:1px solid #7A7A7A;
+
+    background:white;
+
+    overflow:hidden;
+}
+
+.progress-fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #5AA1FF,
+            #0A64F6
+        );
+
+    animation:loadBar 2s linear forwards;
+}
+
+@keyframes loadBar{
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+

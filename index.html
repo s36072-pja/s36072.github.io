@@ -1,1 +1,354 @@
-    <link rel="stylesheet" href="https://use.typekit.net/vps0djy.css">
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+</head>
+
+    <script>
+fetch("fetches/header.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+    });
+
+fetch("fetches/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+    });
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        const loader = document.getElementById("loader");
+
+        loader.classList.add("fade-out");
+
+        setTimeout(() => {
+
+            loader.remove();
+
+        }, 800);
+
+    }, 2000);
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div id="loader">
+
+    <div class="loader-window">
+
+        <div class="loader-bar">
+            Ładowanie...
+        </div>
+
+        <div class="loader-content">
+
+            <p>Uruchamianie SCM...</p>
+
+            <div class="progress">
+                <div class="progress-fill"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<header id="header"></header>
+
+<div class="powitanie">
+    <div>
+        <h2><b> Drogi użytkowniku, witaj  w nowym, odświeżonym, Shitpost Corner Majki!</b></h2>  <br>
+        <p>Czy szukasz nowych shitpostów? Fajnych quizów do rozwiązania? To miejsce dla ciebie! Znajdziesz tutaj wszystkie, nawet te najdziwniejsze historie, opowieści i recenzje. Przygotuj więc sobie kawkę lub herbatkę, wybierz któryś z polecanych albumów, i rozczytaj się w tym pejdzu.</p>
+    </div>
+
+    <div class="machajka">
+        <img src="pliki/wave.png" alt="Machająca Majka" class="bujanie">
+    </div>
+
+</div>
+
+    <h1>Galeria shitpostów miesiąca:</h1>
+
+    <div class="games-container">
+
+
+
+        <a href="kula.html" class="xp-window">
+
+            <div class="xp-titlebar">
+
+                <span class="xp-title">
+                    06/06/26
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-content">
+
+                <img src="pliki/mads.gif"
+                alt="blushing majka"
+                class="game-thumb">
+
+            </div>
+
+        </a>
+
+        <a href="kula.html" class="xp-window">
+
+            <div class="xp-titlebar">
+
+                <span class="xp-title">
+                    24/03/26
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-content">
+
+                <img src="pliki/info.gif"
+                alt="magiczna kula"
+                class="game-thumb">
+
+            </div>
+
+        </a>
+
+        <a href="kula.html" class="xp-window">
+
+            <div class="xp-titlebar">
+
+                <span class="xp-title">
+                    01/06/26
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-content">
+
+                <img src="pliki/bi.gif"
+                alt="magiczna kula"
+                class="game-thumb">
+
+            </div>
+
+        </a>
+
+    </div>
+
+<h1>Galeria quizów:</h1>
+
+<div class="games-container">
+
+
+
+    <a href="gry/Game3.html" class="xp-window">
+
+        <div class="xp-titlebar">
+
+            <span class="xp-title">
+                Tarot wrózki tatiany
+            </span>
+
+            <div class="xp-buttons">
+                <span class="xp-btn">_</span>
+                <span class="xp-btn">□</span>
+                <span class="xp-btn close">✕</span>
+            </div>
+
+        </div>
+
+        <div class="xp-content">
+
+            <img src="pliki/wruzka.gif"
+            alt="magiczna kula"
+            class="game-thumb">
+
+        </div>
+
+    </a>
+
+    <a href="gry/Game1.html" class="xp-window">
+
+        <div class="xp-titlebar">
+
+            <span class="xp-title">
+                Poznaj Majkę
+            </span>
+
+            <div class="xp-buttons">
+                <span class="xp-btn">_</span>
+                <span class="xp-btn">□</span>
+                <span class="xp-btn close">✕</span>
+            </div>
+
+        </div>
+
+        <div class="xp-content">
+
+            <img src="pliki/maika.gif"
+            alt="majka"
+            class="game-thumb">
+
+        </div>
+
+    </a>
+
+    <a href="gry/Game3.html" class="xp-window">
+
+        <div class="xp-titlebar">
+
+            <span class="xp-title">
+                Magiczna Kula
+            </span>
+
+            <div class="xp-buttons">
+                <span class="xp-btn">_</span>
+                <span class="xp-btn">□</span>
+                <span class="xp-btn close">✕</span>
+            </div>
+
+        </div>
+
+        <div class="xp-content">
+
+            <img src="pliki/69ball.gif"
+            alt="magiczna kula"
+            class="game-thumb">
+
+        </div>
+
+    </a>
+
+        </div>
+
+</div>
+
+<div class="bottombox"> 
+        <div class="xp-post-edit">
+
+            <div class="xp-post-bar">
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-post-title-center">
+
+                <div>
+                    <h4>Zobacz, jaki album wpadł na półkę:</h4>
+                    <button class="director">przejdź do albumiarni</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="xp-post-edit">
+
+            <div class="xp-post-bar">
+
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-post-title-center">
+
+                <div>
+                    <h4>Lub sprawdź przepiśnik!</h4>
+                    <button class="director">Przepiśnik</button>
+                </div>
+                  
+            
+
+            </div>
+        </div>
+
+    <div class="xp-post-edit">
+
+        <div class="xp-post-bar">
+
+
+
+            <div class="xp-buttons">
+                <span class="xp-btn">_</span>
+                <span class="xp-btn">□</span>
+                <span class="xp-btn close">✕</span>
+            </div>
+
+        </div>
+
+        <div class="xp-post-title-edit">
+            <h4>Zapisz się na newsletter:</h4>
+            <div>
+                <form class="dane">
+                <label class="nwstxt"for="fname">Imię:</label><br>
+                <input class="formbox" type="text" id="fname" name="fname"><br>
+                <label class="nwstxt" for="lname">Twój Mail:</label><br>
+                <input class="formbox" type="text" id="lname" name="lname"> <br><br>
+                </form>
+                <div class="submit">
+                    <input type="submit" class="btnnews" value="Zapisz się" name="Zapisz się">
+                </div>
+            </div>
+
+
+        </div>
+
+     </div>
+
+    
+    </div>
+
+</div>
+
+<div id="footer"></div>
+
+</body>
+
+</html>

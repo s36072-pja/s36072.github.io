@@ -1,0 +1,141 @@
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/text.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+
+    <script>
+    fetch("../../../fetches/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("../../../fetches/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+
+    </script>
+
+    <style>
+   
+    #footer{
+        margin-top:auto;
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<header id="header"></header>
+
+<div class="powitanie">
+    <div>
+        <h2><b>Przepiśnik</b></h2>  <br>
+        <p>Przepisy, które działają. Po prostu.</p>
+    </div>
+
+</div>
+
+
+    <div class="games-container">
+
+
+
+        <a href="./mads.html" class="xp-window">
+
+            <div class="xp-titlebar">
+
+                <span class="xp-title">
+                    06/06/26
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-content">
+
+                <img src="../../../pliki/beza.gif"
+                alt="blushing majka"
+                class="game-thumb">
+
+            </div>
+
+        </a>
+
+        <a href="infa.html" class="xp-window">
+
+            <div class="xp-titlebar">
+
+                <span class="xp-title">
+                    24/03/26
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-content">
+
+                <img src="../../../pliki/lemon.gif"
+                alt="magiczna kula"
+                class="game-thumb">
+
+            </div>
+
+        </a>
+
+        <a href="biseks.html" class="xp-window">
+
+            <div class="xp-titlebar">
+
+                <span class="xp-title">
+                    01/06/26
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-content">
+
+                <img src="../../../pliki/mango.gif"
+                alt="magiczna kula"
+                class="game-thumb">
+
+            </div>
+
+        </a>
+
+    </div>
+
+<footer id="footer"></footer>

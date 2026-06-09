@@ -1,0 +1,87 @@
+
+
+h1{
+  font-family: "Coral Pixels", serif;
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 1rem;
+  text-align:  center;
+}
+
+h2{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+}
+
+h3{
+   font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h4{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+h5, h6{
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+h5{
+    color: #6dcde3;
+}
+
+h6{
+    color:#f184b5;
+}
+p {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color:#110F35;
+}
+
+b {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+  color:#DE4A92;
+}
+
+i {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+  color:#0ab0c9;
+}
+
+b and i {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+  color: #E19726;
+}
+
+li {  
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color:#110F35;
+
+}
+
+ a{
+    text-decoration:none;
+}

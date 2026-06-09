@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/text.css">
+     <link rel="stylesheet" href="../../css/cytatdnia.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+
+    <script>
+        fetch("/../../fetches/header.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+    });
+
+fetch("../../fetches/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+    });
+    </script>
+
+
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<div class="spacer"></div>
+
+    <div class="posts-grid">
+
+        <div class="xp-post hero-post">
+
+            <div class="xp-post-bar">
+                Cytat dnia:
+            </div>
+
+            <div class="xp-post-title-edit">
+
+                <h1 id="quote"></h1>
+            </div>
+            <div class="author"><p id="author"></p></div>
+        </div>
+    </div>
+
+<div class="spacer"></div>
+
+<footer id="footer"></footer>
+
+</body>
+
+<script>
+const cytaty = [
+    {
+        tekst: "Czemu sypiecie sól na me rany",
+        autor: "- klaudeliza"
+    },
+    {
+        tekst: "Życie jest piękne tylko nie moje i nie wasze.",
+        autor: "-Ela Gawin"
+    },
+    {
+        tekst: "Kocham rysować i mam w związku z tym dużo i to bardzo dużo planów na życie, aż tak dużo że nie wiem na którym się skupić... więc narazie po prostu rysuje.",
+        autor: "-Nanami Chan"
+    },
+    {
+        tekst: "Będę grał w gre.",
+        autor: "-Anonim"
+    },
+       {
+        tekst: "Proszę państwa Paweł będzie skakał",
+        autor: "-Anonim"
+    },
+       {
+        tekst: "Słuchajcie mam wam coś bardzo waznego do powiedzenia, zupełnie prosto od siebie............BĘDZIE DOBRZE. Musicie mi zaufać, trzymajcie się napewno.",
+        autor: "PaniPanika"
+    },
+       {
+        tekst: "U I I A I U U I I A I.",
+        autor: "- kręcący się kot"
+    },
+       {
+        tekst: "CZY SĄ TU JAKIES SEKSI 🐱??!?!?!?!?!?!.",
+        autor: "Fagata"
+    }
+];
+
+const losowy = cytaty[Math.floor(Math.random() * cytaty.length)];
+
+document.getElementById("quote").textContent = losowy.tekst;
+document.getElementById("author").textContent = "-" + losowy.autor;</script>
+</html>

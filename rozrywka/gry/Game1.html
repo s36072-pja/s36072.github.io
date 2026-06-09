@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/text.css">
+    <link rel="stylesheet" href="../css/game1.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/inx6lcw.css">
+    
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+    
+    <style>
+        .character-container{
+            width:100%;
+            margin:0 auto;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            display:flex;
+            justify-content:center;
+            width:min(95vw, 900px);
+            height:auto;
+
+        }
+
+        .character-container img{
+            width:min(90vw, 700px);
+            height:auto;
+            display:block;
+        }
+        @media screen and (max-width: 768px){
+
+
+            .header-inner{
+                padding:10px;
+            }
+
+            .header-logo img{
+                width:70vw;
+                max-width:250px;
+            }
+
+            .powitanie{
+
+                flex-direction:column;
+
+                text-align:center;
+
+                gap:1rem;
+
+                padding:1rem;
+            }
+
+            .powitanie img{
+
+                width:80vw;
+                max-width:250px;
+
+                height:auto;
+            }
+
+
+            .xp-post{
+
+                width:95%;
+
+                min-width:auto;
+
+                margin:1rem auto;
+            }
+
+            .xp-post-title{
+
+                font-size:1.2rem;
+
+                padding:0.8rem;
+            }
+
+            .xp-post-title-edit{
+
+                font-size:1.2rem;
+
+                padding:1rem;
+            }
+
+            /* NEWSLETTER */
+
+            .newsletter{
+
+                flex-direction:column;
+
+                align-items:stretch;
+
+                gap:1rem;
+            }
+
+            .fields{
+
+                width:100%;
+            }
+
+            .formbox{
+
+                width:100%;
+
+                max-width:none;
+            }
+
+            .submit{
+
+                width:100%;
+
+                margin:0;
+            }
+
+            .btnnews{
+
+                width:100%;
+            }
+
+            /* MINI GRY */
+
+            .games-container{
+
+                flex-direction:column;
+
+                align-items:center;
+            }
+
+            .xp-window{
+
+                width:95%;
+
+                max-width:350px;
+            }
+
+            /* MAPKA POSTACI */
+
+            .character-container{
+
+                width:100%;
+
+                overflow-x:auto;
+            }
+
+            .character-container img{
+
+                width:100%;
+
+                max-width:500px;
+
+                height:auto;
+            }
+
+            #dialog{
+
+                font-size:14px;
+
+                max-width:65%;
+            }
+
+            .xp-buttons{
+
+                transform:scale(.9);
+            }
+
+        }
+
+        @media screen and (max-width: 480px){
+
+            .xp-post-title,
+            .xp-post-title-edit{
+
+                font-size:1rem;
+            }
+
+            .xp-post-bar{
+
+                font-size:0.7rem;
+            }
+
+            .xp-btn{
+
+                width:16px;
+                height:16px;
+
+                font-size:8px;
+            }
+
+            #dialog{
+                font-size:12px;
+            }
+
+        }
+    
+        body{
+            text-align:center;
+            margin:0;
+        }
+
+        .xp-post{
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .xp-post-title{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        #dialogBox{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            width:100%;
+        }
+
+        #dialog{
+            margin:0 auto;
+            max-width:700px;
+        }
+
+    
+.xp-post{
+    width:75% !important;
+    max-width:1200px;
+    margin:1.5rem auto !important;
+}
+
+@media screen and (max-width: 768px){
+    .xp-post{
+        width:92% !important;
+    }
+}
+
+</style>
+
+    <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+
+    <script>
+        fetch("../../fetches/headerclean.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("headeralt").innerHTML = data;
+        });
+
+        fetch("../../fetches/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+        });
+
+    window.addEventListener('load', () => {
+        if (typeof imageMapResize === 'function') {
+            imageMapResize();
+        }
+    });
+
+    const discovered = new Set();
+
+    function showDialog(title, text, id){
+
+        document.getElementById("speaker").textContent = title;
+        document.getElementById("dialog").textContent = text;
+
+        if(!discovered.has(id)){
+
+            discovered.add(id);
+
+            document.getElementById("counter").textContent = discovered.size;
+
+            if(discovered.size === 8){
+
+                document.getElementById("speaker").textContent = "🎉 Gratulacje!";
+
+                document.getElementById("dialog").textContent =
+                "Udało Ci się odkryć wszystkie informacje o Majce!";
+            }
+        }
+    }
+
+
+
+    </script>
+
+</head>
+
+        
+
+
+
+<body style="background-color: #F4F7FF;">
+
+    
+<header id="headeralt"></header>
+
+    <h1>Poznaj Majkę!</h1>
+
+    <p>
+    Klikaj na elementy ciała i ubioru, aby dowiedzieć się więcej o Majce.
+    </p>
+
+            <div class="xp-post">
+
+                <div class="xp-post-bar">
+
+                    <span class="post-meta">
+                        Poznaj_Majkę.exe
+                    </span>
+
+                    <div class="xp-buttons">
+                        <span class="xp-btn">_</span>
+                        <span class="xp-btn">□</span>
+                        <span class="xp-btn close">✕</span>
+                    </div>
+
+                </div>
+
+                <div class="xp-post-title">
+
+                    <div>
+                        <div class="character-container">
+                            <img src="../../pliki/maika.gif" usemap="#image-map" alt="Majka">
+                        </div>    
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+               
+
+    
+
+    <div>
+
+            <div class="xp-post">
+
+                <div class="xp-post-bar">
+
+                    <span class="post-meta">
+                        Autor: Majka | 06.06.2025
+                    </span>
+
+                    <div class="xp-buttons">
+                        <span class="xp-btn">_</span>
+                        <span class="xp-btn">□</span>
+                        <span class="xp-btn close">✕</span>
+                    </div>
+
+                </div>
+
+                <div class="xp-post-title">
+
+                    <div>
+                        <div id= "dialogBox" style= "padding: 1vh">
+                            <h2 id="speaker">Majka</h2>
+                            <p id="dialog">Kliknij jakiś element postaci, aby rozpocząć poznawanie Majki!</p>
+                        </div>
+                    
+                    </div>
+
+                </div>
+        </div>
+
+    </div>
+
+     <div id="progress">
+                    Odkryto: <span id="counter">0</span>/8
+                </div>
+
+    <footer id="footer"></footer>
+
+    <map name="image-map">
+
+        <!-- Kolczyki -->
+        <area href="#"
+            coords="247,121,10"
+            shape="circle"
+            alt="kolczyki"
+            onclick="showDialog('Kolczyki','To moje ulubione kolczyki. Koleżanka mi je zrobiła.','earrings');  return false;">
+
+        <!-- Kubek -->
+        <area href="#"
+            coords="216,190,217,181,185,179,168,183,175,194,182,221,182,228,198,230,207,226,200,203,204,193"
+            shape="poly"
+            alt="kubek"
+            onclick="showDialog('Kubek','Kawa. Mój preferowany napój. Podwójne espresso z trzyprocentowym mlekiem.','cup'); return false;">
+
+        <!-- Sweter -->
+        <area href="#"
+            coords="227,161,236,138,230,129,196,137,158,136,149,144,156,158,115,175,69,237,77,255,140,248,142,239,118,218,145,207,152,192,165,190,165,180,218,183,220,191,234,205,230,219,215,224,196,232,173,226,157,230,149,250,282,252,271,214,268,173,247,163"
+            shape="poly"
+            alt="sweter"
+            onclick="showDialog('Sweter','Mój ulubiony golf. Jest z wełny merino, miękki i ciepły.','sweater'); return false;">
+
+        <!-- Oczy -->
+        <area href="#"
+            coords="159,89,6"
+            shape="circle"
+            alt="oczy"
+            onclick="showDialog('Oczy','Mam okropnie grube szkła. Wiem że mam wory pod oczami, niestety miernie sypiam.','eyes'); return false;">
+
+        <area href="#"
+            coords="214,89,7"
+            shape="circle"
+            alt="kolczyki"
+            onclick="showDialog('Oczy','Mam okropnie grube szkła. Wiem że mam wory pod oczami, niestety miernie sypiam.','eyes'); return false;">
+
+        <!-- Włosy -->
+        <area href="#"
+            coords="260,116,283,104,271,100,283,77,269,79,258,37,230,18,208,15,194,19,177,19,156,16,132,22,120,34,114,74,117,101,109,108,117,112,118,118,133,121,137,109,126,65,139,54,145,41,155,59,167,66,165,47,182,56,208,65,225,62,249,70,261,82,257,104,245,106"
+            shape="poly"
+            alt="włosy"
+            onclick="showDialog('Włosy','Życie byłoby wspaniałe, gdyby moje włosy zawsze się układały.','hair'); return false;">
+
+        <!-- Blizny -->
+        <area href="#"
+            coords="142,221,130,220,148,237,152,229"
+            shape="poly"
+            alt="blizny"
+            onclick="showDialog('Blizny','Kiedyś się samookaleczałam. Teraz jest znacznie lepiej.','scars'); return false;">
+
+        <!-- Twarz -->
+        <area href="#"
+            coords="227,122,191,134,152,127,166,111,173,97,196,99,196,82,195,75,218,71,181,61,173,72,142,73,172,83,192,86"
+            shape="poly"
+            alt="twarz"
+            onclick="showDialog('Majka','Mam coś na twarzy?','face'); return false;">
+
+        <!-- Policzki -->
+        <area href="#"
+            coords="151,110,12"
+            shape="circle"
+            alt="policzki"
+            onclick="showDialog('Policzki','Uwielbiam nosić róż. Zawsze dodaje uroku.','cheeks'); return false;">
+
+        <area href="#"
+            coords="226,107,9"
+            shape="circle"
+            alt="policzki"
+            onclick="showDialog('Policzki','Hej, nie szczyp mnie w policzki!','cheeks'); return false;">
+
+    </map>
+
+<footer id="footer"></footer>
+
+</html>

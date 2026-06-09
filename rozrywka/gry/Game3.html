@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../../css/text.css">
+    <link rel="stylesheet" href="../../../css/animations.css">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/game2.css">
+    
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+
+    <script>
+        window.addEventListener("load", () => {
+
+            if (typeof imageMapResize === "function") {
+                imageMapResize();
+            }
+
+        });
+
+        const answers = [
+
+            "Będziesz udawać Filipa Hajzera trochę za mocno i zostaniesz zbanowany ze społeczeństwa.",
+            "Gdy wejdziesz do kasyna, wygrasz wszystkie możliwe gry i staniesz się bogatszy niż Elon Musk.",
+            "Twoja smaczna kawusia okaże się wypełniona lekami przeczyszczającymi.",
+            "Wpadniesz w Concept Store na cukrowego ojca i twoje życie stanie się o wiele prostsze.",
+            "Ty i twój evil ex pójdziecie na terapię i znowu będziecie razem.",
+            "Wywrócisz się na skórce od banana przed kimś bardzo ważnym.",
+            "Ktoś podejdzie do ciebie i poprosi o zdjęcia twoich stóp.",
+            "Zostaniesz zrickrollowany.",
+            "Pyszny kebab misiane misiane okaże się zatruty i zmieni to twoje nawyki toaletowe.",
+            "Kupisz kurs fake psycholożki i stracisz cały majątek.",
+            "Zgubisz portfel, a ktoś inny znajdzie go pierwszy. Był to twój szef.",
+            "Babcia balkonowa przywali ci laczkiem."
+
+        ];
+
+        let thinking = false;
+
+        function randomAnswer(){
+
+            if(thinking) return;
+
+            thinking = true;
+
+            const dialog =
+                document.getElementById("dialog");
+
+            dialog.textContent = "Myślę...";
+
+            setTimeout(() => {
+
+                const randomIndex =
+                    Math.floor(Math.random() * answers.length);
+
+                dialog.textContent =
+                    answers[randomIndex];
+
+                thinking = false;
+
+            }, 1500);
+
+        }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    fetch("../../../fetches/headerclean.html")
+        .then(r => r.text())
+        .then(data => {
+            const el = document.getElementById("headeralt");
+            if(el) el.innerHTML = data;
+        });
+
+    fetch("../../../fetches/footer.html")
+        .then(r => r.text())
+        .then(data => {
+            const el = document.getElementById("footer");
+            if(el) el.innerHTML = data;
+        });
+
+});
+    </script>
+
+</head>
+
+
+
+<body>
+
+<header id="headeralt"></header>
+
+<h1>Dzienny tarot wróki tatiany</h1>
+
+<p style="text-align: center;">
+Kliknij na kartę, aby otrzymać swoją wrózbę!
+</p>
+<div>
+       <div class="xp-post">
+
+            <div class="xp-post-bar">
+
+                <span class="post-meta">
+                    Autor: Majka | 06.06.2025
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <div class="character-container">
+
+                    <img src="/../../../pliki/wruzka.gif" usemap="#image-map" alt="wruzka tatiana">
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="xp-post">
+
+            <div class="xp-post-bar">
+
+                <span class="post-meta">
+                    Autor: Majka | 06.06.2025
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <div>
+                    <h2>Twoja wrózba na dziś:</h2>
+                        <div id="dialog">
+                        </div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+
+</div>
+
+<map name="image-map">
+    <area
+        coords="172,38,218,217,338,192,298,7"
+        shape="poly"
+        href="#"
+        alt="karta t"
+        onclick="randomAnswer(); return false;">
+</map>
+
+
+<footer id="footer"></footer>
+
+</body>
+</html>

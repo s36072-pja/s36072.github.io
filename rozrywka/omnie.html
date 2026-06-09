@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/text.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/post.css">
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+</head>
+    <script>
+        fetch("/../../fetches/header.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+    });
+
+fetch("../../fetches/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+    });
+
+    </script>
+
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<div class="spacer"></div>
+
+    <div class="posts-grid">
+
+        <div class="xp-post hero-post">
+
+            <div class="xp-post-bar">
+                Autor: Majka
+            </div>
+
+            <div class="xp-post-title">
+
+                <h1>O mnie</h1>
+
+            </div>
+
+        </div>
+
+        <div class="xp-post big-post">
+
+            <div class="xp-post-bar">
+
+                <span>Post.exe</span>
+
+                <div class="xp-buttons">
+
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis fugit porro expedita ab distinctio. Quos repudiandae, aut ipsa explicabo aliquam vitae, laudantium consequuntur voluptates modi sed est nostrum nobis deleniti.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="xp-post small-post">
+
+            <div class="xp-post-bar">
+
+                ♫⋆｡♪ ₊˚♬ ˚.
+
+                <div class="xp-buttons">
+
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <h2>Tracklist:</h2>
+
+
+                <p>
+                <ol style="text-align: left">
+                    <li>"Family Tree" (Intro)</li>
+                    <li>"American Teenager"</li>	
+                    <li>"A House in Nebraska"</li>
+                    <li>"Western Nights"</li>
+                    <li>"Family Tree"</li>	 	 	
+                    <li>"Hard Times"</li>	 	 	
+                    <li>"Thoroughfare"</li>	 	 	
+                    <li>"Gibson Girl"</li>
+                    <li>"Ptolemaea"</li>	
+                    <li>"August Underground"</li>	
+                    <li><b>"Televangelism"</b></li>	 	 	
+                    <li>."Sun Bleached Flies"</li>	 	 	
+                    <li>"Strangers"</li>
+                </ol>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="xp-post medium-post">
+
+            <div class="xp-post-bar">
+
+                <span>Socjale</span>
+
+                <div class="xp-buttons">
+                </div>
+
+            </div>
+
+            <div class="xp-post-title-center">
+                <div>
+                    <h2>Socjale:</h2>
+                </div>
+                <div>
+                    <button class="director">Instagram</button>
+                    <button class="director">Mail</button>
+                    <button class="director">Wordpress</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="xp-post medium-post">
+
+            <div class="xp-post-bar">
+
+                <span>Now Playing....</span>
+
+                <div class="xp-buttons">
+
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/31BrGLteIEkETsqKOQBMD6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="spacer"></div>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

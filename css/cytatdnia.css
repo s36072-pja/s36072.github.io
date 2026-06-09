@@ -1,0 +1,152 @@
+ body{
+
+
+            background-image:url("../../../pliki/windowsxp.jpeg");
+
+            background-size:cover;
+
+            background-position:center;
+
+            background-repeat:no-repeat;
+
+            background-attachment:fixed;
+
+            margin:0;
+
+            padding:2rem;
+
+        }
+        .review {
+            font-family: "Micro 5", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            size: 1rem;
+        }
+        .spacer {
+            padding:5vh;
+        }
+
+        .posts-grid{
+
+            width:min(95%, 1400px);
+
+            margin:auto;
+
+            display:grid;
+
+            grid-template-columns:repeat(12, 1fr);
+
+            gap:1.5rem;
+        }
+
+        .xp-post{
+
+            background:#ECE9D8;
+
+            border:1px solid #003C74;
+
+            box-shadow:
+                2px 2px 0 rgba(0,0,0,.15);
+        }
+
+        .xp-post-bar{
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #0A64AD,
+                    #2D8DE0
+                );
+
+            color:white;
+
+            padding:.4rem .6rem;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+            font-family: "Micro 5", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size:1rem;
+
+            font-weight:bold;
+        }
+
+        .xp-buttons{
+
+            display:flex;
+
+            gap:4px;
+        }
+
+        .xp-btn{
+
+            width:18px;
+            height:18px;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            background:#ECE9D8;
+
+            border:1px solid #666;
+
+            color:black;
+
+            font-size:11px;
+        }
+
+        .xp-post-title-edit{
+            display: flex;
+            flex-direction: column;
+            padding:5rem;
+
+            text-align:center;
+        }
+
+
+        .hero-post{
+
+            grid-column:span 12;
+        }
+
+        .big-post{
+
+            grid-column:span 8;
+        }
+
+        .medium-post{
+
+            grid-column:span 6;
+        }
+
+        .small-post{
+
+            grid-column:span 4;
+        }
+        .author{
+           text-align: right;
+           padding: 3rem;
+        padding-bottom: 0.5rem;
+        }
+        @media screen and (max-width:900px){
+
+            .hero-post,
+            .big-post,
+            .medium-post,
+            .small-post{
+
+                grid-column:span 12;
+            }
+
+            body{
+
+                padding:1rem;
+            }
+        }

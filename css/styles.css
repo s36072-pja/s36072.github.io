@@ -1,0 +1,85 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+ cursor:url("../../../pliki/cursor.cur"), auto !important;
+}
+
+body{
+  background-color:#EDF3FB ;
+}
+
+hr{
+
+height: 2px;
+  background-color:#A9B2BF ;
+  color: #A9B2BF;
+}
+
+.director {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    background-color: #6DCDE3;
+    margin: 2.5rem;
+    padding: 1rem 6rem;
+    color: #000;
+    box-shadow: 2px 4px #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    transition: 1s ease-in-out;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+
+.director:hover{
+  transform:scale(1.1) translateY(10px);
+     background-color:#0AB0C9;
+     box-shadow: 2px 8px #000000;
+
+}
+
+.support {
+    background-color: aqua;
+    margin: 5px;
+    padding: 12px 24px;
+    color: #000;
+    box-shadow: 2px 4px #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+
+}
+
+
+.przerwa{
+    padding-top: 10vh;
+}
+
+.btnnews{
+    margin: 2vh 4vw;
+    padding: 1vw 4vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 2px 4px;
+    background-color:#F184B5;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+}
+.nwstxt{
+    font-size: 1rem;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}

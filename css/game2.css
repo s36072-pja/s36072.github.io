@@ -1,0 +1,139 @@
+.character-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    width:min(95vw, 900px);
+    height:auto;
+
+}
+
+.character-container img{
+    width:min(90vw, 700px);
+    height:auto;
+    display:block;
+}
+@media screen and (max-width: 768px){
+
+
+    .games-container{
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .xp-window{
+
+        width:95%;
+
+        max-width:350px;
+    }
+
+    .character-container{
+
+        width:100%;
+
+        overflow-x:auto;
+    }
+
+    .character-container img{
+
+        width:100%;
+
+        max-width:500px;
+
+        height:auto;
+    }
+
+    #dialog{
+
+        font-size:14px;
+        justify-content: center;
+        max-width:65%;
+    }
+
+    .xp-buttons{
+
+        transform:scale(.9);
+    }
+
+}
+@media screen and (max-width: 480px){
+
+    .xp-post-title,
+    .xp-post-title-edit{
+
+        font-size:1rem;
+    }
+
+    .xp-post-bar{
+
+        font-size:0.7rem;
+    }
+
+    .xp-btn{
+
+        width:16px;
+        height:16px;
+
+        font-size:8px;
+    }
+
+    #dialog{
+        font-size:12px;
+    }
+
+  
+
+}
+
+body{
+    text-align:center;
+    margin:0;
+}
+
+.xp-post{
+    width:75% !important;
+    max-width:1200px;
+    margin:1.5rem auto !important;
+}
+
+.xp-post-title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.character-container{
+    margin:0 auto !important;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.character-container img{
+    width:min(90vw,700px);
+    height:auto;
+}
+
+#dialogBox,
+#dialogBox h2,
+#dialogBox p,
+#speaker,
+#dialog{
+    text-align:center !important;
+}
+
+#dialogBox{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+@media screen and (max-width:768px){
+    .xp-post{
+        width:92% !important;
+    }
+}

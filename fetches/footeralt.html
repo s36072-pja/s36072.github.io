@@ -1,0 +1,155 @@
+<footer class="footeralt">
+
+    <hr>
+
+    <div class="footer-content">
+
+        <div class="footer-text">
+
+
+            <p>
+
+                No i na co się lampisz? Ze ci nie wstyd!
+            
+            </p>
+
+            <p class="footer-author">
+                Wiktoria Majewska<br>
+                s36072
+            </p>
+
+        </div>
+
+        <div class="footer-image">
+            <img src="../pliki/maikatired.PNG"
+                 alt="Brzydki doodle smutnej majki">
+        </div>
+
+    </div>
+
+</footer>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.alt-footer{
+    width:100%;
+    background:white;
+    margin:0;
+    padding:0;
+}
+
+.alt-footer hr{
+    margin:0;
+    padding:0;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:15vh;
+    margin:25px;
+}
+
+.footer-logo img{
+    width:240px;
+    height:auto;
+    display:block;
+}
+
+.alt-footer{
+    width:100%;
+    background:white;
+    margin:0;
+    padding:0;
+}
+
+.alt-footer hr{
+    margin:0;
+    padding:0;
+}
+
+.footer-content{
+
+    display:flex;
+    flex-direction:row;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:4rem;
+
+    max-width:1200px;
+
+    margin:0 auto;
+    padding:40px 20px;
+    background-color: white;
+}
+
+.footer-text{
+    flex:1;
+    max-width:650px;
+}
+
+.footer-text h6{
+
+    margin:0 0 1rem 0;
+
+    font-size:2rem;
+}
+
+.footer-text p{
+
+    margin:0;
+    line-height:1.6;
+}
+
+.footer-author{
+
+    margin-top:2rem !important;
+    font-weight:bold;
+}
+
+.footer-image{
+
+    flex-shrink:0;
+}
+
+.footer-image img{
+
+    width:220px;
+    height:auto;
+
+    display:block;
+}
+
+@media (max-width:768px){
+
+    .footer-content{
+
+        flex-direction:column;
+        text-align:center;
+
+        gap:2rem;
+    }
+
+    .footer-image img{
+
+        width:180px;
+    }
+
+      .footer-inner{
+        margin:15px;
+    }
+
+    .footer-logo img{
+        width:25vh;
+    }
+}
+
+</style>

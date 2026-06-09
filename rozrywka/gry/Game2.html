@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.typekit.net/inx6lcw.css">
+    
+    <link rel="stylesheet" href="../../css/text.css">
+    <link rel="stylesheet" href="../../css/game2.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    
+    <link rel="shortcut icon" href="pliki/favicon.ico" type="image/x-icon">
+  
+<script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+
+<script>
+
+        fetch("../../../fetches/headerclean.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("headeralt").innerHTML = data;
+        });
+
+        fetch("../../../fetches/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+        });
+
+const answers = [
+
+    "Tak.",
+    "Nie.",
+    "Raczej tak.",
+    "SZEŚĆ SIEDEM!!!!!11!!!1",
+    "Zdecydowanie tak.",
+    "Daj na chorom curke",
+    "Nie mam pojęcia.",
+    "twój ex to czerwona flaga",
+    "*Britney spears Toxic Strings*",
+    "Gwiazdy mówią: tak.",
+    "Przegraj całe swoje pięniądze, dom i rodzine",
+    "spal babcie na stosie",
+    "Lepiej tego nie rób.",
+    "Pocałuj mężczyzne.",
+    "sprzedaj pseudopsychologiczny kurs za 10 tysięcy marek niemieckich i ucieknij do zakonu mnichów szaolin",
+    "kup sobie smaczną kawusie",
+    "rabini są podzieleni",
+
+
+];
+
+let thinking = false;
+
+function randomAnswer(){
+
+    if(thinking) return;
+
+    thinking = true;
+
+    const dialog =
+        document.getElementById("dialog");
+
+    dialog.textContent =
+        " Myślę...";
+
+    setTimeout(() => {
+
+        const randomIndex =
+            Math.floor(Math.random() * answers.length);
+
+        dialog.textContent =
+            answers[randomIndex];
+
+        thinking = false;
+
+    }, 1500);
+
+}
+
+window.addEventListener('load',()=>{
+    if(typeof imageMapResize==='function'){imageMapResize();}
+});
+</script>
+    
+</head>
+
+
+
+<body>
+
+
+
+
+
+<header id="headeralt"></header>
+
+<h1>Magiczna Kula odpowiedzi!</h1>
+
+<p>
+Zadaj pytanie i kliknij w niebieski trójkąt. Otrzymasz adekwatną odpowiedź.
+</p>
+
+<div class="pojemnik">
+        <div class="xp-post">
+
+            <div class="xp-post-bar">
+
+                <span class="post-meta">
+                    Poznaj_Majkę.exe
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <div>
+                     <div class="character-container">
+                        <img src="../../../pliki/69ball.gif"
+                            usemap="#image-map"
+                            alt="69ball">
+
+                     </div>    
+                    </div>
+                
+                </div>
+
+            </div>
+
+</div>
+
+<div>
+
+        <div class="xp-post">
+
+            <div class="xp-post-bar">
+
+                <span class="post-meta">
+                    Kula twierdzi....
+                </span>
+
+                <div class="xp-buttons">
+                    <span class="xp-btn">_</span>
+                    <span class="xp-btn">□</span>
+                    <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+
+            <div class="xp-post-title">
+
+                <div>
+                    <div id="dialogBox" style="padding:1vh";>
+                        <div id="dialog">Twoja odpowiedź to...
+                         </div>
+                    </div>
+                
+                </div>
+
+            </div>
+    </div>
+</div>
+
+<map name="image-map">
+
+    <area href="#"
+          coords="185,75,158,123,209,123"
+          shape="poly"
+          onclick="randomAnswer(); return false;">
+
+
+
+
+<footer id="footer"></footer>
+</body>
+
+</html>

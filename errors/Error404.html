@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <title>Shitpost Corner Majki</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Micro+5&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <link rel="shortcut icon" href="../pliki/favicon.ico" type="image/x-icon">
+    
+    <style>
+
+    #win98-window {
+    width: 520px;
+    margin: 40px auto;
+    background: #c0c0c0;
+    font-family: Tahoma, sans-serif;
+    border: 2px solid;
+    border-color: #fff #404040 #404040 #fff;
+    box-shadow: 2px 2px 0 #000;
+    cursor: default;
+    transition: transform 0.05s;
+    }
+
+    #win98-window:hover {
+    transform: translate(-1px, -1px);
+    }
+
+
+    #win98-window:active {
+    transform: translate(1px, 1px);
+    border-color: #404040 #fff #fff #404040;
+    box-shadow: none;
+    }
+
+    .win-btn:active {
+    border-color: #404040 #fff #fff #404040;
+    transform: translate(1px, 1px);
+    }
+
+    .win-btn.close {
+    font-weight: bold;
+    }
+
+    #dvd-box {
+    width: 100%;
+    height: 320px;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid #404040;
+    }
+
+    #dvd-logo {
+    position: absolute;
+    width: 120px;
+    pointer-events: none;
+    transition: filter 0.2s linear;
+
+    }
+
+    .error{
+        display:flex;
+        margin:5vw;
+        justify-content: left;
+        flex-direction: column;
+        }
+</style>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.getElementById("dvd-logo");
+    const box = document.getElementById("dvd-box");
+
+    let x = 100;
+    let y = 100;
+
+    function randomAngle() {
+        let a;
+        do {
+        a = Math.random() * Math.PI * 2;
+        } while (Math.abs(Math.cos(a)) < 0.3 || Math.abs(Math.sin(a)) < 0.3);
+        return a;
+    }
+
+    const speed = 3;
+    let angle = randomAngle();
+
+    let dx = Math.cos(angle) * speed;
+    let dy = Math.sin(angle) * speed;
+
+    function animate() {
+        const w = box.clientWidth;
+        const h = box.clientHeight;
+
+        const lw = logo.clientWidth;
+        const lh = logo.clientHeight;
+
+        x += dx;
+        y += dy;
+
+        if (x <= 0 || x + lw >= w) {
+        dx *= -1;
+        changeColor();
+        }
+
+        if (y <= 0 || y + lh >= h) {
+        dy *= -1;
+        changeColor();
+        }
+
+        logo.style.left = x + "px";
+        logo.style.top = y + "px";
+
+        requestAnimationFrame(animate);
+    }
+
+    function changeColor() {
+        logo.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+    }
+
+    animate();
+    });
+
+    fetch("../fetches/headerclean.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("headerclean").innerHTML = data;
+        });
+
+    fetch("../fetches/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+
+</script>
+
+</head>
+
+<body>   
+
+    <header id="headerclean"></header>
+
+    <div class="error">
+    <h1>404</h1>
+    <h2>O nie! jesteśmy zgubieni!</h2>
+    <p>Ojejku! Strona którą wybrałeś została pożarta przez Matrixa. Niestety, obecnie jest ona niedostępna. W międzyczasie, obejrzyj, jak majka odbija się w boxie poniżej...</p>
+    </div>
+
+    <div id="win98-window">
+        <div class="xp-postbar">
+            <div class="xp-titlebar">
+
+                <span class="xp-title"></span>
+                
+                <div class="xp-buttons">
+                        <span class="xp-btn">_</span>
+                        <span class="xp-btn">□</span>
+                        <span class="xp-btn close">✕</span>
+                </div>
+
+            </div>
+    </div>
+
+    <div id="dvd-box">
+            <img id="dvd-logo" src="../pliki/oop.png" alt="przestraszona majka odbijająca się w pudełku">
+    </div>
+
+    </div>
+
+    <footer id="footer"></footer>
+
+</body>
+
+
+
